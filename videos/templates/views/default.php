@@ -77,7 +77,7 @@ echo '<div'.$classes.$inline_style.'>';
 			'vid'			=> $video_youtube,
 			'counter'		=> $urc_counter,
 		);
-		
+		echo '<div><b>YouTube</b></div>';
 		echo '<div class="item-youtube">'.$mfunc_ext->urc_vid_embed( $args_yt ).'</div>';
 
 	}
@@ -94,7 +94,7 @@ echo '<div'.$classes.$inline_style.'>';
 			'vid'			=> $video_vimeo,
 			'counter'		=> $urc_counter,
 		);
-		
+		echo '<div><b>Vimeo</b></div>';
 		echo '<div class="item-vimeo">'.$mfunc_ext->urc_vid_embed( $args_vi ).'</div>';
 
 	}
@@ -116,7 +116,7 @@ echo '<div'.$classes.$inline_style.'>';
 		} else {
 			$video_rumble_target = '';
 		}
-
+		echo '<div><b>Rumble Link</b></div>';
 		echo '<div class="item-rumble"><a href="'.$video_rumble[ "url" ].'"'.$video_rumble_target.'>'.$video_rumble_text.'</a></div>';
 
 	}
@@ -124,7 +124,7 @@ echo '<div'.$classes.$inline_style.'>';
 	// RUMBLE EMBED
 	$video_rumble_e = $mfunc->urc_vid_array_validation( "rumble_embed", $urc_vars );
 	if( !empty( $video_rumble_e ) && is_array( $bsf ) && in_array( 'rumble_embed', $bsf ) ) {
-
+		echo '<div><b>Rumble Embed</b></div>';
 		echo '<div class="item-rumble-embed">'.$mfunc_ext->urc_oembed_sc( $video_rumble_e ).'</div>';
 
 	}
@@ -139,7 +139,7 @@ echo '<div'.$classes.$inline_style.'>';
 			'autoplay' => '',
 			'preload' => 'none'
 		);
-		
+		echo '<div><b>Audio</b></div>';
 		echo '<div class="item-video_audio">'.wp_audio_shortcode( $attr_vid ).'</div>';
 
 	}
